@@ -1,8 +1,4 @@
 
----
-"Practical Machine Learning - Project report"
----
-
 # Practical Machine Learning - Project report
 
 ### DATA IMPORT
