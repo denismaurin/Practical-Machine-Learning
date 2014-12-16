@@ -1,7 +1,3 @@
-Practical-Machine-Learning
-==========================
-
-Practical Machine Learning - Coursera - Project assignment
 
 ---
 "Practical Machine Learning - Project report"
@@ -135,7 +131,7 @@ Overall Statistics
 **Accuracy reaches 99,65% with random forest showing that this algorithm is largely better than simple trees**
 
 We can also observe the best predictors with varImp
-image: ![](/Users/denismaurin/Documents/Rclass/Project/varimpp.png)
+image: ![](./varimpp.png)
 
 ## Apply to the test set
 
