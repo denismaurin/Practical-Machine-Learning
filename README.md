@@ -77,7 +77,7 @@ text(modFitTREE, use.n=TRUE, all=TRUE, cex=.8)
 We can observe that the tree is very deep. Before attempting any pruning, let's have a look at the results
 
 
-Apply the tree against our test set
+Apply the tree against our test set (cross validation) and then calculate the accuracy (out of sample)
 ```
 predictTREE <- predict(modFitTREE, newdata=testS, type="class")
 ```

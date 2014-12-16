@@ -100,7 +100,7 @@ print(modFitTREE)</code></pre>
 <pre><code>plot(modFitTREE, uniform=TRUE, main=&quot;Classification Tree&quot;)
 text(modFitTREE, use.n=TRUE, all=TRUE, cex=.8)</code></pre>
 <p>We can observe that the tree is very deep. Before attempting any pruning, let’s have a look at the results</p>
-<p>Apply the tree against our test set</p>
+<p>Apply the tree against our test set (cross validation) to calculate out of sample accuracy</p>
 <pre><code>predictTREE &lt;- predict(modFitTREE, newdata=testS, type=&quot;class&quot;)</code></pre>
 <p>Display the results using the confusion matrix</p>
 <pre><code>confusionMatrix(predictTREE, testS$classe)
@@ -117,7 +117,7 @@ Overall Statistics
 </div>
 <div id="random-forest" class="section level3">
 <h3>Random forest</h3>
-<p>We would hope that random forest leads to better results than the plain trees We follow the same method as before.</p>
+<p>We would hope that random forest leads to better results than the plain trees. We follow the same method as before and check the accuracy against our test set (cross validation).</p>
 <pre><code>modFitRF &lt;- randomForest(classe ~ ., data=trainS, method=&quot;class&quot;)
 print(modFitRF$finalModel)
 predictRF &lt;- predict(modFitRF, newdata=testS, type=&quot;class&quot;)

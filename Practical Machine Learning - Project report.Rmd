@@ -80,7 +80,7 @@ text(modFitTREE, use.n=TRUE, all=TRUE, cex=.8)
 We can observe that the tree is very deep. Before attempting any pruning, let's have a look at the results
 
 
-Apply the tree against our test set
+Apply the tree against our test set (cross validation) to calculate out of sample accuracy
 ```
 predictTREE <- predict(modFitTREE, newdata=testS, type="class")
 ```
@@ -104,8 +104,8 @@ Overall Statistics
 
 ### Random forest
 
-We would hope that random forest leads to better results than the plain trees 
-We follow the same method as before.
+We would hope that random forest leads to better results than the plain trees. 
+We follow the same method as before and check the accuracy against our test set (cross validation).
 
 ```
 modFitRF <- randomForest(classe ~ ., data=trainS, method="class")
